@@ -1,0 +1,40 @@
+/* src/App.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor principal - Flexbox para sidebar + contenido */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+/* Contenido principal (lo que cambia con las rutas) */
+.main-content {
+  margin-left: 250px; /* Espacio para el sidebar */
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Responsive - tablets */
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 200px;
+    padding: 20px;
+  }
+}
+
+/* Responsive - móviles */
+@media (max-width: 400px) {
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+}

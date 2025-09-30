@@ -1,0 +1,17 @@
+/* src/pages/Home/Home.css */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-container h1 {
+  color: #dc143c; /* Rojo LEGO */
+  margin-bottom: 20px;
+}
+
+.team-info {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
