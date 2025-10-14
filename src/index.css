@@ -1,6 +1,6 @@
 /* src/index.css */
 
-/* Importar Google Fonts (la que uses en tu proyecto) */
+/* importar fuente */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 body {
@@ -17,7 +17,6 @@ code {
     monospace;
 }
 
-/* Estilos globales que puedes copiar de tu CSS original */
 h1,
 h2,
 h3,
