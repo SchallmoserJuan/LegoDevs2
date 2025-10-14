@@ -16,7 +16,9 @@
 
 /* Contenido principal (lo que cambia con las rutas) */
 .main-content {
-  margin-left: 250px; /* Espacio para el sidebar */
+  margin-left: var(
+    --sidebar-width
+  ); /* Espacio para el sidebar (coincide con Sidebar width) */
   flex: 1;
   padding: 30px;
   background-color: #ffffff;
@@ -24,17 +26,19 @@
 }
 
 /* Responsive - tablets */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .main-content {
-    margin-left: 200px;
+    margin-left: calc(
+      var(--sidebar-width) - 40px
+    ); /* slightly reduced on tablet */
     padding: 20px;
   }
 }
 
 /* Responsive - móviles */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .main-content {
-    margin-left: 0;
+    margin-left: 0; /* Sidebar becomes overlay on small screens */
     padding: 15px;
   }
 }
