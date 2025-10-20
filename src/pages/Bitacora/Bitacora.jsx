@@ -1,23 +1,27 @@
-import React from "react";
-import LogSummary from "./LogSummary";
-import LogCards from "./LogCards";
-import Timeline from "./Timeline";
+import React, { useMemo } from "react";
+import { bitacoraData } from "../../assets/data/bitacoraData";
+import { BitacoraHeader } from "./BitacoraHeader";
+import { Timeline } from "./Timeline";
 import styles from "./Bitacora.module.css";
 
 const Bitacora = () => {
-  return (
-    <div className={styles.bitacora}>
-      <section className={styles.hero}>
-        <h1>Bitácora</h1>
-        <p className={styles.heroText}>
-          Documentamos nuestro proceso de desarrollo, metodologías y aprendizajes
-          como equipo de trabajo.
-        </p>
-      </section>
+  const stats = useMemo(() => {
+    const total = bitacoraData.length;
+    const completed = bitacoraData.filter(entry => entry.status === "completado").length;
+    const inProgress = bitacoraData.filter(entry => entry.status === "en-progreso").length;
+    
+    return { total, completed, inProgress };
+  }, []);
 
-      <LogSummary />
-      <LogCards />
-      <Timeline />
+  return (
+    <div className={styles.bitacoraContainer}>
+      <BitacoraHeader 
+        title="Bitácora del Proyecto"
+        subtitle="Seguimiento del desarrollo, decisiones tomadas y próximos pasos."
+        stats={stats}
+      />
+      
+      <Timeline entries={bitacoraData} />
     </div>
   );
 };

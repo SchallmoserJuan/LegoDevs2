@@ -1,212 +1,175 @@
-.homeContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+main {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-/* ========== HERO SECTION ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Section */
 .hero {
+  position: relative;
   text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 20px;
+  color: #fff;
   border-radius: 12px;
-  color: white;
-  margin-bottom: 4rem;
+  margin: 0 auto 60px auto;
+  max-width: 1024px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background: #333; /* Fallback */
+}
+
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) brightness(0.7);
+  z-index: 1;
+}
+
+.hero h1,
+.hero p,
+.hero .btn {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
 }
 
 .heroText {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  max-width: 700px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
 }
 
-.ctaBtn {
-  display: inline-block;
-  padding: 0.875rem 2.5rem;
-  background: white;
-  color: #667eea;
+.btn {
+  padding: 12px 24px;
+  background-color: #ffffff;
+  color: #121212;
   text-decoration: none;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
 }
 
-.ctaBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  background: #f8f9fa;
+.btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
 }
 
-/* ========== TEAM PREVIEW ========== */
+/* Sección Nuestro Equipo */
 .teamPreview {
-  margin-bottom: 4rem;
+  margin-bottom: 60px;
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .teamPreview h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #333;
-  font-weight: 700;
+  font-size: 2.2rem;
+  color: #121212;
+  margin-bottom: 40px;
 }
 
 .teamMembers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .member {
-  background: white;
-  padding: 2rem 1.5rem;
+  background-color: #f9f9f9;
+  padding: 20px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  width: 170px;
+  transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-}
-
-.member:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #eee;
 }
 
 .member img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
   object-fit: cover;
-  border: 4px solid #667eea;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .member h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #121212;
 }
 
 .member p {
-  color: #667eea;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-/* ========== LOG PREVIEW (Últimos Avances) ========== */
-.logPreview {
-  background: white;
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.logPreview h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #333;
-  font-weight: 700;
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.step {
-  padding: 2rem;
-  border-radius: 10px;
-  border-left: 5px solid;
-  transition: all 0.3s ease;
-}
-
-.step:hover {
-  transform: translateX(5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.step h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.step p {
+  font-size: 0.9rem;
   color: #555;
-  line-height: 1.6;
-  font-size: 1rem;
 }
 
-/* Estados de los pasos */
-.step-completo {
-  background: #d4edda;
-  border-left-color: #28a745;
+.member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.step-completo h3 {
-  color: #155724;
+.memberLink {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
 
-.step-desarrollo {
-  background: #fff3cd;
-  border-left-color: #ffc107;
-}
-
-.step-desarrollo h3 {
-  color: #856404;
-}
-
-.step-pendiente {
-  background: #f8d7da;
-  border-left-color: #dc3545;
-}
-
-.step-pendiente h3 {
-  color: #721c24;
-}
-
-/* ========================================
-   RESPONSIVE - TABLET (768px - 1024px)
-   ======================================== */
-
-@media (max-width: 1024px) {
-  .hero {
-    padding: 3rem 1.5rem;
-    margin-bottom: 3rem;
-  }
-
+/* Responsive */
+@media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .heroText {
-    font-size: 1.1rem;
-  }
-
-  .ctaBtn {
-    padding: 0.75rem 2rem;
     font-size: 1rem;
   }
 
-  .teamPreview h2,
-  .logPreview h2 {
+  .stats {
+    gap: 2rem;
+  }
+
+  .statNumber {
     font-size: 2rem;
-    margin-bottom: 2rem;
+  }
+
+  .teamPreview h2,
+  .skillsPreview h2,
+  .ctaSection h2 {
+    font-size: 2rem;
   }
 
   .teamMembers {
@@ -214,172 +177,13 @@
     gap: 1.5rem;
   }
 
-  .member img {
-    width: 100px;
-    height: 100px;
+  .heroCta {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .steps {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
   }
-
-  .logPreview {
-    padding: 2.5rem 1.5rem;
-  }
-}
-
-/* ========================================
-   RESPONSIVE - MOBILE (< 768px)
-   ======================================== */
-
-@media (max-width: 768px) {
-  .homeContainer {
-    padding: 1rem 0.5rem;
-  }
-
-  .hero {
-    padding: 2.5rem 1rem;
-    margin-bottom: 2.5rem;
-    border-radius: 8px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .heroText {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    padding: 0 0.5rem;
-  }
-
-  .ctaBtn {
-    padding: 0.7rem 1.75rem;
-    font-size: 0.95rem;
-  }
-
-  .teamPreview {
-    margin-bottom: 2.5rem;
-  }
-
-  .teamPreview h2,
-  .logPreview h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .teamMembers {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.25rem;
-    padding: 0 0.5rem;
-  }
-
-  .member {
-    padding: 1.5rem 1rem;
-  }
-
-  .member img {
-    width: 90px;
-    height: 90px;
-    border-width: 3px;
-  }
-
-  .member h3 {
-    font-size: 1.1rem;
-  }
-
-  .member p {
-    font-size: 0.9rem;
-  }
-
-  .logPreview {
-    padding: 2rem 1rem;
-  }
-
-  .steps {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .step {
-    padding: 1.5rem;
-  }
-
-  .step h3 {
-    font-size: 1.2rem;
-  }
-
-  .step p {
-    font-size: 0.95rem;
-  }
-}
-
-/* ========================================
-   RESPONSIVE - SMALL MOBILE (< 480px)
-   ======================================== */
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.75rem;
-  }
-
-  .heroText {
-    font-size: 0.95rem;
-  }
-
-  .ctaBtn {
-    padding: 0.65rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  .teamPreview h2,
-  .logPreview h2 {
-    font-size: 1.5rem;
-  }
-
-  .teamMembers {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .member img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .member h3 {
-    font-size: 1rem;
-  }
-
-  .step h3 {
-    font-size: 1.1rem;
-  }
-}
-
-/* ========================================
-   ACCESIBILIDAD Y ANIMACIONES
-   ======================================== */
-
-/* Reducir movimiento para usuarios que lo prefieran */
-@media (prefers-reduced-motion: reduce) {
-  .member,
-  .step,
-  .ctaBtn {
-    transition: none;
-  }
-
-  .member:hover,
-  .step:hover,
-  .ctaBtn:hover {
-    transform: none;
-  }
-}
-
-/* Focus visible para teclado */
-.ctaBtn:focus-visible,
-.member:focus-visible {
-  outline: 3px solid #667eea;
-  outline-offset: 3px;
 }

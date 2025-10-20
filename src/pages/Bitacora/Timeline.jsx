@@ -1,28 +1,37 @@
-import React from 'react';
-import styles from './Bitacora.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import { TimelineItem } from "./TimelineItem";
+import { getRelativeTime } from "../../assets/data/bitacoraData";
+import styles from "./Bitacora.module.css";
 
-const Timeline = () => {
-  const timelineData = [
-    { week: 'Semana 1-2', description: 'Investigación y definición de requisitos.' },
-    { week: 'Semana 3-4', description: 'Diseño UI/UX: wireframes y prototipos.' },
-    { week: 'Semana 5-8', description: 'Desarrollo del frontend y backend.' },
-    { week: 'Semana 9-10', description: 'Pruebas y corrección de errores.' },
-    { week: 'Semana 11', description: 'Lanzamiento y despliegue.' }
-  ];
+export const Timeline = ({ entries }) => {
+  if (!entries || entries.length === 0) {
+    return (
+      <div className={styles.timeline}>
+        <p style={{ textAlign: 'center', color: '#64748b', padding: '2rem' }}>
+          No hay entradas en la bitácora aún.
+        </p>
+      </div>
+    );
+  }
 
   return (
-    <section className={styles.timeline}>
-      <h2>Timeline del Proyecto</h2>
-      <div className={styles.timelineGrid}>
-        {timelineData.map((block, index) => (
-          <div key={index} className={styles.timelineBlock}>
-            <h3>{block.week}</h3>
-            <p>{block.description}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+    <div className={styles.timeline}>
+      {entries.map((entry) => (
+        <TimelineItem 
+          key={entry.id} 
+          entry={entry} 
+          relativeTime={getRelativeTime(entry.date)}
+        />
+      ))}
+    </div>
   );
 };
 
-export default Timeline;
+Timeline.propTypes = {
+  entries: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};
