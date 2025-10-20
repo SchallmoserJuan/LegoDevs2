@@ -37,13 +37,17 @@ export const teamData = [
     name: "Carlos Gez",
     role: "Frontend Developer",
     status: "Enfocado en la interfaz de usuario",
-    avatar: "https://randomuser.me/api/portraits/lego/6.jpg",
+    avatar: "https://randomuser.me/api/portraits/lego/1.jpg",
     bio: "Apasionado en todo lo relacionado con lo visual y el diseño, desde la conceptualización de interfaces intuitivas hasta la implementación de componentes interactivos con animaciones fluidas.",
     skills: ["React", "Vue.js", "JavaScript", "HTML", "CSS", "TypeScript"],
-    projects: [],
+    projects: [
+      { name: "Portfolio Interactivo", status: "completado" },
+      { name: "Landing Page Animada", status: "completado" },
+      { name: "Dashboard de Analytics", status: "en progreso" }
+    ],
     contact: {
-      github: "https://github.com/carlosgez",
-      linkedin: "https://linkedin.com/in/carlosgez",
+      github: "https://github.com/gezcarlos22",
+      linkedin: "https://www.linkedin.com/in/carlos-gez/",
     },
   },
   {
