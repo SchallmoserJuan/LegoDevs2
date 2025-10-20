@@ -38,7 +38,7 @@ export const teamData = [
     role: "Frontend Developer",
     status: "Enfocado en la interfaz de usuario",
     avatar: "https://randomuser.me/api/portraits/lego/6.jpg",
-    bio: "Apasionado por la creación de interfaces de usuario atractivas y funcionales. Me especializo en el desarrollo frontend utilizando las últimas tecnologías web.",
+    bio: "Apasionado en todo lo relacionado con lo visual y el diseño, desde la conceptualización de interfaces intuitivas hasta la implementación de componentes interactivos con animaciones fluidas.",
     skills: ["React", "Vue.js", "JavaScript", "HTML", "CSS", "TypeScript"],
     projects: [],
     contact: {
