@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./pages/Home/Home";
@@ -8,13 +9,12 @@ import "./styles/global.css";
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-container">
+      <div className="app-container" style={{ display: "flex" }}>
         <Sidebar />
-        <main className="main-content">
+        <main className="main-content" style={{ flex: 1, padding: "20px" }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/bitacora" element={<Bitacora />} />
-            <Route path="/profile/:name" element={<ProfilePage />} />
           </Routes>
         </main>
       </div>
