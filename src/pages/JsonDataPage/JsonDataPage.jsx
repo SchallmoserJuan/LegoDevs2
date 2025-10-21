@@ -1,5 +1,6 @@
 import React from "react";
 import productsData from "../../assets/data/products.json";
+import ProductCard from "../../components/productCard/productCard"; // Ajusta la ruta según tu estructura
 import styles from "./JsonDataPage.module.css";
 
 const JsonDataPage = () => {
@@ -15,18 +16,7 @@ const JsonDataPage = () => {
 
       <div className={styles.gridContainer}>
         {productsData.map((product) => (
-          <div key={product.id} className={styles.productCard}>
-            <img
-              src={product.imageUrl}
-              alt={product.name}
-              className={styles.productImage}
-            />
-            <div className={styles.productInfo}>
-              <h3>{product.name}</h3>
-              <p className={styles.category}>{product.category}</p>
-              <p className={styles.price}>${product.price}</p>
-            </div>
-          </div>
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>
