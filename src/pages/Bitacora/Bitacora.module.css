@@ -1,1 +1,398 @@
-/* bitacora.module.css */
+.bitacora {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.heroText {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* ========== LOG SUMMARY ========== */
+.logSummary {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.logSummary h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.logSummary p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.logSummary p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== LOG CARDS ========== */
+.logCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid #667eea;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  padding: 0.75rem 0;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1rem;
+}
+
+.card ul li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.card strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* ========== TIMELINE ========== */
+.timeline {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline h2 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.timelineGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.timelineBlock {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.timelineBlock:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+}
+
+.timelineBlock h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.timelineBlock p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET (768px - 1024px)
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .bitacora {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero {
+    padding: 2.5rem 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .heroText {
+    font-size: 1rem;
+  }
+
+  .logSummary {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .logSummary h2 {
+    font-size: 1.75rem;
+  }
+
+  .logSummary p {
+    font-size: 1rem;
+  }
+
+  .logCards {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .card {
+    padding: 1.75rem;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .timeline {
+    padding: 2rem;
+  }
+
+  .timeline h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .timelineGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .timelineBlock {
+    padding: 1.25rem;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE (< 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+  .bitacora {
+    padding: 1rem 0.5rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .heroText {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  .logSummary {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .logSummary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .logSummary p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .logCards {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p,
+  .card ul li {
+    font-size: 0.95rem;
+  }
+
+  .card ul li {
+    padding: 0.65rem 0;
+  }
+
+  .timeline {
+    padding: 1.5rem;
+  }
+
+  .timeline h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .timelineGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .timelineBlock {
+    padding: 1.25rem;
+  }
+
+  .timelineBlock h3 {
+    font-size: 1.1rem;
+  }
+
+  .timelineBlock p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - SMALL MOBILE (< 480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .heroText {
+    font-size: 0.9rem;
+  }
+
+  .logSummary {
+    padding: 1.25rem;
+  }
+
+  .logSummary h2,
+  .timeline h2 {
+    font-size: 1.3rem;
+  }
+
+  .logSummary p {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p,
+  .card ul li {
+    font-size: 0.9rem;
+  }
+
+  .timelineBlock {
+    padding: 1rem;
+  }
+
+  .timelineBlock h3 {
+    font-size: 1rem;
+  }
+
+  .timelineBlock p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ========================================
+   ACCESIBILIDAD Y MEJORAS
+   ======================================== */
+
+/* Reducir movimiento para usuarios que lo prefieran */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .timelineBlock {
+    transition: none;
+  }
+
+  .card:hover,
+  .timelineBlock:hover {
+    transform: none;
+  }
+}
+
+/* Focus visible para navegación por teclado */
+.card:focus-within,
+.timelineBlock:focus-within {
+  outline: 3px solid #667eea;
+  outline-offset: 3px;
+}
