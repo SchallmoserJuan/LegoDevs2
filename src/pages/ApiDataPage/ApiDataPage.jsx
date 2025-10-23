@@ -7,9 +7,7 @@ const ApiDataPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Esta función se ejecuta solo una vez, cuando el componente se monta.
     const fetchLegoSets = async () => {
-      // IMPORTANTE: Reemplaza 'TU_API_KEY_AQUI' con la clave que obtuviste de Rebrickable.
       const apiKey = "12d7bc4adb28a3cb10dcf9afc64bed32";
 
       try {

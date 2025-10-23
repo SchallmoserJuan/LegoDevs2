@@ -1,27 +1,29 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar/Sidebar";
+import { Routes, Route } from "react-router-dom";
+import ProductCard from "./components/productCard/productCard";
 import Home from "./pages/Home/Home";
 import Bitacora from "./pages/Bitacora/Bitacora";
 import ProfilePage from "./pages/Profile/ProfilePage";
 import JsonDataPage from "./pages/JsonDataPage/JsonDataPage";
-import "./styles/global.css";
+import ApiDataPage from "./pages/ApiDataPage/ApiDataPage";
+import DiagramsPage from "./pages/DiagramsPage/DiagramsPage";
+import Layout from "./components/Layout/Layout";
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="app-layout">
-        <Sidebar />
-        <main className="main-content" style={{ flex: 1, padding: "20px" }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/bitacora" element={<Bitacora />} />
-            <Route path="/profile/:name" element={<ProfilePage />} />
-            <Route path="/json-data" element={<JsonDataPage />} />
-          </Routes>
-        </main>
-      </div>
-    </BrowserRouter>
+    <Layout>
+      <Routes>
+        {/* Rutas del TP1 migradas */}
+        <Route path="/" element={<Home />} />
+        <Route path="/bitacora" element={<Bitacora />} />
+        <Route path="/profile/:name" element={<ProfilePage />} />
+
+        {/* Nuevas rutas requeridas para el TP2 */}
+        <Route path="/json-data" element={<JsonDataPage />} />
+        <Route path="/api-data" element={<ApiDataPage />} />
+        <Route path="/diagrams" element={<DiagramsPage />} />
+      </Routes>
+    </Layout>
   );
 }
 

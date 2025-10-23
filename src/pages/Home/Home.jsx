@@ -5,14 +5,9 @@ import { TeamMemberCard } from "./TeamMemberCard";
 import styles from "./Home.module.css";
 
 const Home = () => {
-   // Calcular estadísticas del equipo
-  //const totalTasks = teamData.reduce((sum, member) => sum + member.stats.completedTasks, 0);
-  const totalTasks = (teamData || []).reduce(
-  (sum, member) =>
-    sum + (member.projects?.filter((p) => p.status === "completado").length || 0),
-  0
-);  
-const teamSize = teamData.length;
+  // Calcular estadísticas del equipo
+  const totalTasks = teamData.reduce((sum, member) => sum + member.stats.completedTasks, 0);
+  const teamSize = teamData.length;
 
   return (
     <main>
