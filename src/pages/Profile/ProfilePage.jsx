@@ -5,6 +5,7 @@ const ProfilePage = () => {
   
   return (
     <div>
+      <h1>pagina de perfil</h1>
     </div>
   );
 };

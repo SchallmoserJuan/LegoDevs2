@@ -8,7 +8,7 @@ import "./styles/global.css";
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-container">
+      <div className="app-layout">
         <Sidebar />
         <main className="main-content">
           <Routes>
