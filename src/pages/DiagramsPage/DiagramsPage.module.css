@@ -47,6 +47,21 @@
   text-align: center;
 }
 
+.structurePre {
+  text-align: left;
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
+    "Segoe UI Mono", monospace;
+  font-size: 0.95rem;
+  color: #111827;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.03);
+  overflow: auto;
+  max-height: 420px;
+}
+
 .diagramImage {
   max-width: 100%;
   height: auto;

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./DiagramsPage.module.css";
 import arbolDiagram from "../../img/arbol.png";
+import estructuraMd from "../../../Estructura.md?raw";
 
 const DiagramsPage = () => {
   return (
@@ -37,11 +38,7 @@ const DiagramsPage = () => {
           datos y assets públicos.
         </p>
         <div className={styles.imageContainer}>
-          <img
-            src="/img/diagrams/folder-structure.png"
-            alt="Diagrama de la estructura de carpetas"
-            className={styles.diagramImage}
-          />
+          <pre className={styles.structurePre}>{estructuraMd}</pre>
         </div>
       </section>
     </div>
