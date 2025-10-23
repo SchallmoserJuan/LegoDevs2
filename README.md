@@ -1,16 +1,68 @@
-# React + Vite
+# LegoDevs2 — Proyecto Frontend (Grupo 5)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación frontend creada como trabajo práctico académico para la materia de Frontend | IFTS 29.
 
-Currently, two official plugins are available:
+## Descripción corta
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+LegoDevs2 es una SPA (Single Page Application) creada con React y Vite que contiene una barra lateral (sidebar) con navegación principal y secundaria, un submenú de "Equipo" que lista perfiles, páginas de demo para consumir datos JSON y API, una página de bitácora y secciones de perfil/estadísticas.
 
-## React Compiler
+## Tecnologías
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18
+- Vite
+- CSS Modules
+- Lucide (iconos) / react-icons (según reemplazo)
+- React Router
 
-## Expanding the ESLint configuration
+## Estructura principal del proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Raíz relevante:
+
+- `index.html` — punto de entrada HTML (favicon se referencia aquí)
+- `src/main.jsx` — mount React
+- `src/App.jsx` — componente principal / rutas
+- `src/components/Sidebar/` — sidebar, subcomponentes y estilos
+- `src/components/Layout/` — Layout, estilos y el fondo con `background-image`
+- `src/pages/` — páginas de la app (Home, Bitácora, JsonDataPage, ApiDataPage, Profile, DiagramsPage)
+- `public/` — archivos estáticos (favicon y assets públicos)
+- `src/assets/data/` — datos estáticos JSON (productos, equipo, bitácora)
+
+## Instalación (local)
+
+Requisitos: Node.js 18+ (recomendado) y npm o pnpm.
+
+1. Clona el repositorio
+
+```bash
+git clone https://github.com/SchallmoserJuan/LegoDevs2.git
+cd LegoDevs2
+```
+
+2. Instala dependencias
+
+```bash
+npm install
+```
+
+3. Ejecuta en modo desarrollo
+
+```bash
+npm run dev
+```
+
+4. Construir para producción
+
+```bash
+npm run build
+```
+
+## Contribuir
+
+- Crea un fork y abre un Pull Request.
+- Mantén el mismo estilo de indentación y convenciones del repo (CSS Modules, JSX).
+
+## Licencia y atribuciones
+
+Proyecto creado como entrega académica. Consulta al equipo para derechos de autor o distribución.
+
+---
