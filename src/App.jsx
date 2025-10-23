@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import ProductCard from "./components/productCard/productCard";
+import ProductCard from "./components/productCard/ProductCard";
 import Home from "./pages/Home/Home";
 import Bitacora from "./pages/Bitacora/Bitacora";
 import ProfilePage from "./pages/Profile/ProfilePage";
@@ -7,7 +7,6 @@ import JsonDataPage from "./pages/JsonDataPage/JsonDataPage";
 import ApiDataPage from "./pages/ApiDataPage/ApiDataPage";
 import DiagramsPage from "./pages/DiagramsPage/DiagramsPage";
 import Layout from "./components/Layout/Layout";
-
 
 function App() {
   return (

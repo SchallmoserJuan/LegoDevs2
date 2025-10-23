@@ -1,6 +1,6 @@
 import React from "react";
 import productsData from "../../assets/data/products.json";
-import ProductCard from "../../components/productCard/productCard"; // Ajusta la ruta según tu estructura
+import ProductCard from "../../components/productCard/ProductCard"; // Ajusta la ruta según tu estructura
 import styles from "./JsonDataPage.module.css";
 
 const JsonDataPage = () => {
