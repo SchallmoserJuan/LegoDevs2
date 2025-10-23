@@ -14,6 +14,7 @@ import { teamData } from "../../assets/data/teamData";
 import { NavItem } from "./components/NavItem";
 import { TeamSubmenu } from "./components/TeamSubmenu";
 import styles from "./Sidebar.module.css";
+import banner from "../../img/banner.png"
 
 const NAV_ITEMS = [
   { to: "/", icon: Home, label: "Home" },
@@ -64,7 +65,7 @@ const Sidebar = () => {
         <section className={styles.profileSection}>
           <header className={styles.header}>
             <img
-              src="../src/img/banner.png"
+              src={banner}
               alt="Banner del equipo"
               loading="lazy"
             />
