@@ -1,4 +1,4 @@
-// teamData.js
+// assets/data/teamData.js
 export const teamData = [
   {
     id: "juan",
@@ -7,12 +7,15 @@ export const teamData = [
     status: "Enfocado en APIs",
     avatar: "https://randomuser.me/api/portraits/lego/4.jpg",
     bio: "Apasionado por la arquitectura de software y las bases de datos. Me especializo en construir APIs robustas y escalables que sirvan como la columna vertebral de aplicaciones modernas.",
-    skills: ["Node.js", "Express", "MongoDB", "SQL", "Docker", "AWS"],
+    skills: ["Node.js", "Express", "MongoDB", "SQL", "Docker", "GraphQL"],
     projects: [
       { name: "API REST de E-commerce", status: "completado" },
       { name: "Sistema de autenticación JWT", status: "completado" },
       { name: "Microservicios con Docker", status: "en progreso" }
     ],
+    stats: {
+      completedTasks: 90,
+    },
     contact: {
       github: "https://github.com/juanschallmoser",
       linkedin: "https://linkedin.com/in/juanschallmoser",
@@ -20,55 +23,90 @@ export const teamData = [
   },
   {
     id: "sofia",
-    name: "Sofía Trucco",
+    name: "Sofia",
     role: "UX/UI Designer",
-    status: "Enfocada en la experiencia del usuario",
-    avatar: "https://randomuser.me/api/portraits/lego/5.jpg",
-    bio: "Apasionada por el diseño y desarrollo de interfaces intuitivas. Me especializo en crear experiencias de usuario atractivas y funcionales utilizando las últimas tecnologías web.",
-    skills: ["Figma", "Sketch", "Adobe XD", "HTML", "CSS", "JavaScript"],
-    projects: [],
+    avatar: "https://randomuser.me/api/portraits/lego/9.jpg",
+    bio: "Mi objetivo es crear interfaces intuitivas y atractivas que ofrezcan una experiencia de usuario fluida y memorable. Creo que un buen diseño es invisible y simplemente funciona.",
+    status: "Creando experiencias",
+    skills: [
+      "Figma",
+      "Adobe XD",
+      "User Research",
+      "Prototyping",
+      "Wireframing",
+    ],
+    projects: [
+      { name: "Rediseño de Dashboard Admin", status: "completado" },
+      { name: "Sistema de Design Tokens", status: "completado" },
+      { name: "App móvil de fitness", status: "en progreso" }
+    ],
+    stats: {
+      completedTasks: 75,
+    },
     contact: {
-      github: "https://github.com/sofiatrucco",
-      linkedin: "https://linkedin.com/in/sofiatrucco",
+      github: "https://github.com/sofia",
+      linkedin: "https://linkedin.com/in/sofia",
     },
   },
   {
     id: "carlos",
-    name: "Carlos Gez",
+    name: "Carlos",
     role: "Frontend Developer",
-    status: "Enfocado en la interfaz de usuario",
-    avatar: "https://randomuser.me/api/portraits/lego/6.jpg",
-    bio: "Apasionado por la creación de interfaces de usuario atractivas y funcionales. Me especializo en el desarrollo frontend utilizando las últimas tecnologías web.",
-    skills: ["React", "Vue.js", "JavaScript", "HTML", "CSS", "TypeScript"],
-    projects: [],
+    status: "Disponible para colaborar",
+    avatar: "https://randomuser.me/api/portraits/lego/1.jpg",
+    bio: "Especialista en transformar diseños en código interactivo y responsivo. Disfruto trabajando con React para construir componentes dinámicos y eficientes.",
+    skills: ["HTML5", "CSS3", "JavaScript", "React", "Vite", "Git"],
+    projects: [
+      { name: "Portfolio Interactivo", status: "completado" },
+      { name: "Dashboard de Analytics", status: "en progreso" },
+      { name: "Landing Page Animada", status: "completado" }
+    ],
+    stats: {
+      completedTasks: 85,
+    },
     contact: {
-      github: "https://github.com/carlosgez",
-      linkedin: "https://linkedin.com/in/carlosgez",
+      github: "https://github.com/carlos",
+      linkedin: "https://linkedin.com/in/carlos",
     },
   },
   {
     id: "nahir",
-    name: "Nahir Icare",
+    name: "Nahir",
     role: "Project Manager",
-    status: "Enfocada en la gestión de proyectos",
-    avatar: "https://randomuser.me/api/portraits/lego/7.jpg",
-    bio: "Apasionada por la gestión de proyectos y el trabajo en equipo. Me especializo en coordinar equipos multidisciplinarios para lograr objetivos comunes.",
-    skills: ["Gestión de proyectos", "Scrum", "Comunicación", "Liderazgo", "Trabajo en equipo"],
-    projects: [],
+    avatar:
+      "https://d1m9vqlvl3fy94.cloudfront.net/role/attachment/185736/default_SkyLanePortrati2.png",
+    status: "Planificando el éxito",
+    bio: "Organizo el flujo de trabajo y aseguro que el equipo cumpla los objetivos en tiempo y forma. Mi labor es facilitar la comunicación y eliminar cualquier obstáculo en el camino.",
+    skills: ["Scrum", "Agile", "Jira", "Trello", "Comunicación", "Liderazgo"],
+    projects: [
+      { name: "Implementación de metodología Agile", status: "completado" },
+      { name: "Sprint Planning Q4", status: "en progreso" },
+      { name: "Roadmap 2025", status: "en progreso" }
+    ],
+    stats: {
+      completedTasks: 95,
+    },
     contact: {
-      github: "https://github.com/nahiricare",
-      linkedin: "https://linkedin.com/in/nahiricare",
+      github: "https://github.com/nahir",
+      linkedin: "https://linkedin.com/in/nahir",
     },
   },
   {
     id: "rodrigo",
     name: "Rodrigo Chico",
     role: "Full Stack Developer",
-    status: "Enfocado en el desarrollo de aplicaciones web",
-    avatar: "https://randomuser.me/api/portraits/lego/8.jpg",
-    bio: "Apasionado por el desarrollo de aplicaciones web completas. Me especializo en la integración de tecnologías frontend y backend para crear soluciones robustas.",
-    skills: ["JavaScript", "Node.js", "React", "CSS", "HTML", "MongoDB", "SQL"],
-    projects: [],
+    status: "Conectando mundos",
+    avatar: "https://randomuser.me/api/portraits/lego/3.jpg",
+    bio: "Me muevo cómodamente entre el frontend y el backend, conectando todas las piezas del rompecabezas para entregar un producto final cohesivo y funcional.",
+    skills: ["React", "Node.js", "Python", "Django", "AWS", "CI/CD"],
+    projects: [
+      { name: "Plataforma de Learning", status: "completado" },
+      { name: "API GraphQL Compleja", status: "en progreso" },
+      { name: "Deploy automatizado en AWS", status: "completado" }
+    ],
+    stats: {
+      completedTasks: 80,
+    },
     contact: {
       github: "https://github.com/rodrigochico",
       linkedin: "https://linkedin.com/in/rodrigochico",
