@@ -108,7 +108,7 @@ const Sidebar = () => {
                 isOpen={isSubmenuOpen}
                 members={teamData}
                 onItemClick={() => {
-                  setSubmenuOpen(false);
+                  // Solo cerramos el menú móvil, mantenemos el submenú abierto
                   setMobileMenuOpen(false);
                 }}
               />
