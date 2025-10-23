@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./DiagramsPage.module.css";
+import arbolDiagram from "../../img/arbol.png";
 
 const DiagramsPage = () => {
   return (
@@ -21,7 +22,7 @@ const DiagramsPage = () => {
         </p>
         <div className={styles.imageContainer}>
           <img
-            src="/img/diagrams/render-tree.png"
+            src={arbolDiagram}
             alt="Diagrama del árbol de renderizado"
             className={styles.diagramImage}
           />
